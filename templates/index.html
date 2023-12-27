@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TesserXtract.AI</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/Styl.css">
+</head>
+
+<body>
+  <div id="container">
+    <h1>TesserXtract.AI</h1>
+    <div class="upload-section">
+      <p>Upload files (max 10 at a time)</p>
+      <form id="upload-form" method="POST" enctype="multipart/form-data">
+        <input type="file" name="files[]" id="file-input" multiple>
+        <input type="submit" value="Upload">
+      </form>
+    </div>
+    <div class="result-section">
+      <pre id="result"></pre>
+    </div>
+  </div>
+
+  <script>
+    // AJAX request to upload files and process them
+    var form = document.getElementById("upload-form");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var formData = new FormData(form);
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var result = JSON.parse(xhr.responseText);
+          var resultString = JSON.stringify(result, null, 2);
+          document.getElementById("result").textContent = resultString;
+        }
+      };
+      xhr.open("POST", "/upload");
+      xhr.send(formData);
+    });
+  </script>
+</body>
+
+</html>
