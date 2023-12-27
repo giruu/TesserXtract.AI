@@ -1,12 +1,14 @@
- **Here's a more comprehensive summary, incorporating technical details and addressing potential enhancements:**
 
+ **Here's a more comprehensive summary, incorporating technical details and addressing potential enhancements:**
+<img width="1517" alt="Screenshot 2023-12-27 at 8 09 23 PM" src="https://github.com/giruu/TesserXtract.AI/assets/37336192/4623710a-93b2-4c6f-8fb3-fc61449ff9a5">
 **This Flask application empowers users to seamlessly upload image files, extract text using robust OCR technologies, and efficiently isolate key fields using precise regular expressions.**
 
 **Key Features:**
 
 - **Image Upload:** Accommodates multiple image uploads, ensuring versatility in processing diverse documents.
 - **OCR Integration:** Leverages Tesseract, a powerful open-source OCR engine, to accurately extract text from image content.
-- **Field Extraction:** Employs meticulously crafted regular expressions to pinpoint and extract specific fields of interest, streamlining data extraction.
+- **Field Extraction:** Employs meticulously crafted regular expressions to pinpoint
+ and extract specific fields of interest, streamlining data extraction.
 - **JSON Output:** Delivers extracted field values in a structured JSON format, promoting compatibility with downstream applications and data analysis workflows.
 - **Multiprocessing:** Optimizes performance for multiple image uploads by concurrently processing files, enhancing overall efficiency.
 
