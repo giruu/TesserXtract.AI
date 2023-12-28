@@ -53,7 +53,7 @@ Flow:
 Outputs:
 - JSON response containing the extracted field values and filenames.
 """
-import os
+# import os
 import re
 import cv2
 import multiprocessing as mp
